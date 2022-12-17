@@ -5,6 +5,7 @@
   ubuntu 20.04
   
 사전 조건
+
 1.Terraform, Ansible 사전 설치
 
 2.Terraform에서 AWS Provider를 사용하기 위한 AWS 자격증명 인증이 되어있어야 함
@@ -20,6 +21,13 @@
 [local]
 
 local1 ansible_host=127.0.0.1
+
+
+
+
+
+
+
 
 최종 배포 구성도
 
