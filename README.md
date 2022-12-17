@@ -1,10 +1,10 @@
 # K8S-provisioning-AWS
 
-###배포 환경
+### 배포 환경
   
   ubuntu 20.04
   
-###사전 조건
+### 사전 조건
 
 1. Terraform, Ansible 사전 설치
 
@@ -23,9 +23,9 @@ local1 ansible_host=127.0.0.1 #2번 줄
 
 7. Clone후 []로 감싸있는 모든 변수를 본인의 환경에 맞춰줘야 함
 
-###사용방법
+### 사용방법
 init 디렉토리의 start.sh로 실행, init 디렉토리의 destroy.sh로 프로비저닝 리소스 및 의존성 파일 
 
-###최종 배포 구성도
+### 최종 배포 구성도
 
 ![image](https://user-images.githubusercontent.com/77333310/208241680-f0ab847f-6314-40da-8fe6-a44f8aeb0eac.png)
