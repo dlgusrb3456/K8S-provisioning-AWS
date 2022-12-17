@@ -1,6 +1,4 @@
 provider "aws" {
-  access_key = "[YOUR ACCESS KEY ID]"
-
   region = "ap-northeast-1"
 }
 
