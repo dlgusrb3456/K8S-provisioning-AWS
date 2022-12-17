@@ -8,7 +8,7 @@
 
 1. Terraform, Ansible 사전 설치
 
-2. Terraform에서 AWS Provider를 사용하기 위한 AWS 자격증명 인증이 되어있어야 함
+2. Terraform에서 AWS Provider를 사용하기 위한 AWS 자격증명 인증이 되어있어야 함 (aws configure)
 
 3. 프로비저닝 되는 AWS Region의 보안그룹으로 terraform을 생성해줘야함
 
