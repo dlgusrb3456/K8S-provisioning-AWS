@@ -1,0 +1,53 @@
+---
+- name: "copy & install k8s script"
+  hosts: master
+  become: true
+  tasks:
+    - name: "install_k8s.sh copy"
+      copy:
+              src: "/root/terraformlab/install-k8s.sh"
+              dest: "/home/ubuntu/install-k8s.sh"
+    - name: "callico.yaml copy"
+      copy:
+              src: "/root/calico.yaml"
+              dest: "/home/ubuntu/calico.yaml"
+    - name: "nodeport-test.yaml copy"
+      copy:
+              src: "/root/nodeport-test.yaml"
+              dest: "/home/ubuntu/nodeport-test.yaml"
+    - name: "kubeconfig file copy"
+      copy:
+              src: "/root/kubeconfig.sh"
+              dest: "/home/ubuntu/kubeconfig.sh"
+
+    - name: "run Script"
+      shell:
+           "sh /home/ubuntu/install-k8s.sh"
+
+- name: "make masternode"
+  hosts: master
+  become: yes
+  tasks:
+  - name: "make result file"
+    file:
+            path: /home/ubuntu/init_result.txt
+            state: touch
+            mode: 777
+            owner: ubuntu
+  - name: "kubeadm init"
+    shell:
+            "kubeadm init >> /home/ubuntu/init_result.txt"
+  - name: "fetch init_result.txt"
+    fetch:
+            src: "/home/ubuntu/init_result.txt"
+            dest: "/root/init_result.txt"
+            flat: yes
+
+
+- name: "make kubeconfig"
+  hosts: master
+  become: no
+  tasks:
+  - name: "run copy kubeconfig"
+    shell:
+            "sh /home/ubuntu/kubeconfig.sh"
