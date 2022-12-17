@@ -24,7 +24,7 @@ local1 ansible_host=127.0.0.1 #2번 줄
 7. Clone후 []로 감싸있는 모든 변수를 본인의 환경에 맞춰줘야 함
 
 ### 사용방법
-init 디렉토리의 start.sh로 실행, init 디렉토리의 destroy.sh로 프로비저닝 리소스 및 의존성 파일 
+init 디렉토리의 start.sh로 실행, init 디렉토리의 destroy.sh로 프로비저닝 리소스 및 의존성 파일 삭제  
 
 ### 최종 배포 구성도
 
