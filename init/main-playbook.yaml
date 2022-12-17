@@ -5,19 +5,19 @@
   tasks:
     - name: "install_k8s.sh copy"
       copy:
-              src: "/root/terraformlab/install-k8s.sh"
+              src: "./install-k8s.sh"
               dest: "/home/ubuntu/install-k8s.sh"
     - name: "callico.yaml copy"
       copy:
-              src: "/root/calico.yaml"
+              src: "./calico.yaml"
               dest: "/home/ubuntu/calico.yaml"
     - name: "nodeport-test.yaml copy"
       copy:
-              src: "/root/nodeport-test.yaml"
+              src: "./nodeport-test.yaml"
               dest: "/home/ubuntu/nodeport-test.yaml"
     - name: "kubeconfig file copy"
       copy:
-              src: "/root/kubeconfig.sh"
+              src: "./kubeconfig.sh"
               dest: "/home/ubuntu/kubeconfig.sh"
 
     - name: "run Script"
@@ -40,7 +40,7 @@
   - name: "fetch init_result.txt"
     fetch:
             src: "/home/ubuntu/init_result.txt"
-            dest: "/root/init_result.txt"
+            dest: "./init_result.txt"
             flat: yes
 
 
