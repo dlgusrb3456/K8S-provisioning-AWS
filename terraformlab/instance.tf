@@ -7,7 +7,7 @@ resource "aws_instance" "master" {
     command = <<EOF
       echo "[master]" >> /etc/ansible/hosts
       echo "${aws_instance.master.public_ip}" >> /etc/ansible/hosts
-      echo "${aws_instance.master.public_ip}" > /root/masterip
+      echo "${aws_instance.master.public_ip}" > ./masterip
       echo "Host ${aws_instance.master.public_ip}
 User ubuntu
 IdentityFile /root/.ssh/terraform_test_rsa" >> /etc/ssh/ssh_config
