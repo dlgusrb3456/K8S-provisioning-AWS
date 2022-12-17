@@ -10,7 +10,7 @@
 
 2. Terraform에서 AWS Provider를 사용하기 위한 AWS 자격증명 인증이 되어있어야 함 (aws configure)
 
-3. 프로비저닝 되는 AWS Region의 보안그룹으로 terraform을 생성해줘야함
+3. 프로비저닝 되는 AWS Region에서 terraform이라는 이름의 보안그룹을 생성해줘야함 (인바운드 규칙으로 모든 TCP 연결허용 추가 => ssh, nodeport번호, k8s 포트 등등 한번에 처리)
 
 4. init 디렉토리 내부에서 wget https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/calico.yaml 명령을 통해 calico.yaml 다운로드
 
