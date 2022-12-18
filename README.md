@@ -31,3 +31,7 @@ init 디렉토리의 start.sh로 실행, init 디렉토리의 destroy.sh로 프�
 ### 최종 배포 구성도
 
 ![image](https://user-images.githubusercontent.com/77333310/208241680-f0ab847f-6314-40da-8fe6-a44f8aeb0eac.png)
+
+### 데모영상 주소
+
+https://youtu.be/hu-Vi_vRpI0
