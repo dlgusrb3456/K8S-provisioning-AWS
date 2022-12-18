@@ -1,11 +1,11 @@
 #!/bin/bash
-rm -rf /[pwd init directory]/init_result.txt
-rm -rf /[pwd terraformlab directory]/masterip
+rm -rf ./init_result.txt
+rm -rf ../terraformlab/masterip
 sed -i "3,4d" /etc/ansible/hosts
-sed -i "50,52d" /root/workerlab/worker_install_k8s.sh
+sed -i "50,52d" ../workerlab/worker_install_k8s.sh
 
-cd [pwd terraformlab directory]
+cd ../terraformlab
 terraform destroy -auto-approve
 
-cd [pwd workerlab directory]
+cd ../workerlab
 terraform destroy -auto-approve
