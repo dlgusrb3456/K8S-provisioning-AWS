@@ -6,7 +6,7 @@ resource "aws_launch_configuration" "worker" {
   lifecycle     {
     create_before_destroy       = true
   }
-  user_data = file("/root/workerlab/worker_install_k8s.sh")
+  user_data = file("./worker_install_k8s.sh")
 }
 
 data "aws_security_group" "selected" {
